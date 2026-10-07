@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir - CRUD CPF</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>CRUD - Protocolo HTTP (Busca por CPF)</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/post/post.html">Cadastrar</a>
+            <a href="/get/get.html">Listar</a>
+            <a href="/put/put.html">Atualizar</a>
+            <a href="/delete/delete.html">Excluir</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Excluir pessoa (DELETE)</h2>
+        <div class="busca-cpf">
+            <div class="campo">
+                <label for="cpfBusca">Buscar por CPF:</label>
+                <input type="text" id="cpfBusca" placeholder="000.000.000-00">
+            </div>
+            <div class="botoes">
+                <button type="button" id="btnBuscar">Buscar</button>
+            </div>
+        </div>
+
+        <div id="resultado" style="display:none;">
+            <table>
+                <tr><th>ID</th><td id="rId"></td></tr>
+                <tr><th>Nome</th><td id="rNome"></td></tr>
+                <tr><th>Sobrenome</th><td id="rSobrenome"></td></tr>
+                <tr><th>E-mail</th><td id="rEmail"></td></tr>
+                <tr><th>Idade</th><td id="rIdade"></td></tr>
+                <tr><th>CPF</th><td id="rCpf"></td></tr>
+                <tr><th>RG</th><td id="rRg"></td></tr>
+                <tr><th>Telefone</th><td id="rTelefone"></td></tr>
+                <tr><th>Rua</th><td id="rRua"></td></tr>
+                <tr><th>Bairro</th><td id="rBairro"></td></tr>
+                <tr><th>Cidade</th><td id="rCidade"></td></tr>
+                <tr><th>Estado</th><td id="rEstado"></td></tr>
+            </table>
+            <div class="botoes">
+                <button type="button" id="btnExcluir" class="perigo">Excluir</button>
+            </div>
+        </div>
+        <div id="mensagem" class="mensagem"></div>
+    </main>
+    <script src="/delete/delete.js"></script>
+</body>
+</html>

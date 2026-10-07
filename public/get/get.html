@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar - CRUD CPF</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>CRUD - Protocolo HTTP (Busca por CPF)</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/post/post.html">Cadastrar</a>
+            <a href="/get/get.html">Listar</a>
+            <a href="/put/put.html">Atualizar</a>
+            <a href="/delete/delete.html">Excluir</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Listar pessoas (GET)</h2>
+        <div class="busca-cpf">
+            <div class="campo">
+                <label for="cpfBusca">Buscar por CPF:</label>
+                <input type="text" id="cpfBusca" placeholder="000.000.000-00">
+            </div>
+            <div class="botoes">
+                <button type="button" id="btnBuscar">Buscar</button>
+                <button type="button" id="btnLimpar" class="secundario">Limpar</button>
+            </div>
+        </div>
+        <div class="tabela-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>E-mail</th>
+                        <th>Idade</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Telefone</th>
+                        <th>Rua</th>
+                        <th>Bairro</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-corpo"></tbody>
+            </table>
+        </div>
+        <div id="mensagem" class="mensagem"></div>
+    </main>
+    <script src="/get/get.js"></script>
+</body>
+</html>
